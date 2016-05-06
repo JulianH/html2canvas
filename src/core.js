@@ -67,6 +67,8 @@ if (typeof(define) === 'function' && define.amd) {
     });
 }
 
+window.html2canvas = html2canvas;
+
 function renderDocument(document, options, windowWidth, windowHeight, html2canvasIndex) {
     return createWindowClone(document, document, windowWidth, windowHeight, options, document.defaultView.pageXOffset, document.defaultView.pageYOffset).then(function(container) {
         log("Document cloned");
